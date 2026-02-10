@@ -23,10 +23,10 @@ library(here)
 Here we will take the folder containing all the output files and load them into list:
 
 ```{r}
-file_list <- list.files(path = here("output"), pattern = "[0-9].csv$",)
+file_list <- list.files(path = here("Output"), pattern = "[0-9].csv$",)
 
 # read in all the files as dfs
-df_list <- map(file_list, \(x) read_csv(here("output", x)))
+df_list <- map(file_list, \(x) read_csv(here("Output", x)))
 
 # process each df to then bind_rows
 cleaned_list <- map(df_list, \(x) x |> relocate(file) |>
