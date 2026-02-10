@@ -70,7 +70,7 @@ write_csv(main_df, here("Data/birdnet_results.csv"))
 
 Take a look at the deployment df
 ```{r}
-deploy <- read_csv(here("Data/Riparian_AMs.csv"))
+deploy <- read_csv(here("Data/Beavers-2025.csv"))
 glimpse(deploy)
 ```
 
